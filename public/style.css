@@ -118,7 +118,7 @@ section form {
 
 .hero {
 
-  background-image: url('image/newfav.jpg');
+  background-image: url('/image/newfav.jpg');
 
   background-size: cover;
 
