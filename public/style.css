@@ -20,7 +20,7 @@ body {
 
   color: #333;
 
-  font-size: 18px; /* Increased base font size */
+  font-size: 18px;
 
 }
  
@@ -38,7 +38,7 @@ section {
 
   text-align: center;
 
-  font-size: 1.1em; /* Slightly larger section font */
+  font-size: 1.1em;
 
 }
  
@@ -48,8 +48,6 @@ section p {
 
 }
  
-/* Lists and Forms inside sections */
-
 section ul,
 
 section ol,
@@ -66,17 +64,13 @@ section form {
  
 /* Navigation */
 
-.navbar {
+header, .navbar {
 
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-  background-color: #0077b6;
+  margin: 0;
 
   padding: 10px 20px;
+
+  background-color: #0077b6;
 
   color: white;
 
@@ -85,6 +79,16 @@ section form {
   top: 0;
 
   z-index: 1000;
+
+}
+ 
+.navbar {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
 
 }
  
@@ -112,23 +116,45 @@ section form {
 
   font-weight: bold;
 
+  text-decoration: none;
+
+}
+ 
+.nav-links li a:hover {
+
+  text-decoration: underline;
+
 }
  
 /* Hero Section */
 
 .hero {
 
-  background-image: url('/image/newfav.jpg');
+  background-image: url('image/newfav.jpg');
 
   background-size: cover;
 
-  background-position: center;
+  background-position: center center;
+
+  background-repeat: no-repeat;
 
   color: white;
 
   text-align: center;
 
-  padding: 80px 20px;
+  height: 70vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  margin: 0;
+
+  padding: 0;
+
+  position: relative;
 
 }
  
@@ -161,6 +187,8 @@ section form {
   border-radius: 5px;
 
   font-weight: bold;
+
+  text-decoration: none;
 
 }
  
@@ -227,6 +255,74 @@ section form {
   object-fit: cover;
 
   border-radius: 8px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+ 
+.gallery-grid img:hover {
+
+  transform: scale(1.05);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+}
+ 
+/* Daily Routine */
+
+.routine-list {
+
+  list-style: none;
+
+  padding: 0;
+
+  max-width: 600px;
+
+  margin: 0 auto;
+
+  text-align: left;
+
+}
+ 
+.routine-list li {
+
+  background-color: #f0f8ff;
+
+  padding: 12px 18px;
+
+  margin-bottom: 10px;
+
+  border-left: 5px solid #0077b6;
+
+  border-radius: 5px;
+
+}
+ 
+/* Enrollment Info */
+
+.enrollment-buttons {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  margin-top: 20px;
+
+}
+ 
+.enrollment-buttons .btn {
+
+  background-color: #00b4d8;
+
+}
+ 
+.enrollment-buttons .btn:hover {
+
+  background-color: #0096c7;
 
 }
  
@@ -322,6 +418,14 @@ footer a {
 
   font-weight: bold;
 
+  text-decoration: none;
+
+}
+ 
+footer a:hover {
+
+  text-decoration: underline;
+
 }
  
 /* Floating Contact Button */
@@ -379,6 +483,12 @@ footer a {
   #contact form {
 
     width: 90%;
+
+  }
+ 
+  .hero {
+
+    height: 60vh;
 
   }
 
