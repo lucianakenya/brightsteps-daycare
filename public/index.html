@@ -1,178 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>BrightSteps Daycare</title>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BrightSteps Daycare</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Background image for After-School Pickup */
+    #pickup {
+      background-image: url('image/schoolbus.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+      padding: 60px 20px;
+      transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    /* Animation when visible */
+    #pickup.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
 </head>
+
 <body>
- 
   <!-- Navigation -->
-<nav class="navbar">
-<div class="logo">BrightSteps</div>
-<ul class="nav-links">
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About Us</a></li>
-<li><a href="#programs">Programs</a></li>
-<li><a href="#pickup">Pickup</a></li>
-<li><a href="#resources">Resources</a></li>
-<li><a href="#enrollment">Enrollment</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-</nav>
- 
+  <nav class="navbar">
+    <div class="logo">BrightSteps</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#programs">Programs</a></li>
+      <li><a href="#pickup">Pickup</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#enrollment">Enrollment</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- Hero Section -->
-<section id="home" class="hero">
-<h2>BrightSteps Daycare</h2>
-<p class="tagline">Building bright futures together</p>
-<p class="intro">
+  <section id="home" class="hero">
+    <h1>BrightSteps Daycare</h1>
+    <p class="tagline">Building bright futures together</p>
+    <p class="intro">
       At BrightSteps, we nurture curiosity, creativity, and confidence through play-based learning in a safe, loving environment.
-</p>
-<div class="cta-buttons">
-<a href="#enrollment" class="btn">Enroll Today</a>
-<a href="#contact" class="btn">Schedule a Tour</a>
-<a href="#about" class="btn">Learn More</a>
-</div>
-</section>
- 
+    </p>
+    <div class="cta-buttons">
+      <a href="#enrollment" class="btn">Enroll Today</a>
+      <a href="#contact" class="btn">Schedule a Tour</a>
+      <a href="#about" class="btn">Learn More</a>
+    </div>
+  </section>
+
   <!-- About Us -->
-<section id="about">
-<h2>Our Philosophy</h2>
-<p>We follow a play-based approach inspired by Montessori and Reggio Emilia methods, encouraging children to explore, imagine, and grow at their own pace.</p>
- 
+  <section id="about">
+    <h2>Our Philosophy</h2>
+    <p>
+      We follow a play-based approach inspired by Montessori and Reggio Emilia methods, encouraging children to explore, imagine, and grow at their own pace.
+    </p>
+
     <h3>Meet Our Staff</h3>
-<div class="staff-gallery">
-<div class="staff-member">
-<img src="image/female.jpg" alt="Ms. Amina" />
-<p><strong>Ms. Amina</strong><br>Lead Preschool Teacher, 10+ years experience</p>
-</div>
-<div class="staff-member">
-<img src="image/jane.jpg" alt="Jane Kiiru" />
-<p><strong>Ms Kiiru</strong><br>Director and Educator</p>
-</div>
-<div class="staff-member">
-<img src="image/tom.jpg" alt="Mr. Tom" />
-<p><strong>Mr. Tom</strong><br>Security Personnel</p>
-</div>
-<div class="staff-member">
-<img src="image/male.jpg" alt="Mr. Brian" />
-<p><strong>Mr. Brian</strong><br>Infant Care Specialist, CPR Certified</p>
-</div>
-<div class="staff-member">
-<img src="image/john1.jpg" alt="Mr. John" />
-<p><strong>Mr. John</strong><br>Driver</p>
-</div>
-</div>
- 
-    <!-- Facility Tour Section -->
-<section id="facility-tour">
-<h2>Facility Tour</h2>
-<p>Take a virtual walk through our vibrant classrooms, cozy nap areas, and playful outdoor spaces designed for safety and exploration.</p>
-<div class="gallery-grid">
-<img src="image/classroom.jpg" alt="Classroom" />
-<img src="image/playground.jpg" alt="Playground" />
-<img src="image/naproom.jpg" alt="Nap Room" />
-</div>
-</section>
- 
-<!-- Daily Routine Section -->
-<section id="daily-routine">
-<h2>Daily Routine</h2>
-<p>Our Programs run from Monday–Friday as follows.If you need flexible schedules,please reach out on provided platforms</p>
-<ul class="routine-list">
-<li><strong>8:00 AM:</strong> Arrival & Free Play</li>
-<li><strong>9:00 AM:</strong> Circle Time & Learning Activities</li>
-<li><strong>11:30 AM:</strong> Lunch & Quiet Time</li>
-<li><strong>1:00 PM:</strong> Nap Time</li>
-<li><strong>3:00 PM:</strong> Outdoor Play</li>
-<li><strong>4:30 PM:</strong> Story Time & Pickup</li>
-</ul>
-</section>
- 
-<!-- Enrollment Info Section -->
-<section id="enrollment-info">
-<h2>Enrollment Information</h2>
-<p>We welcome children aged 6 months to 5 years. Enrollment is open year-round based on availability.</p>
-<div class="enrollment-buttons">
-<div class="cta-buttons">
-  <a href="public/assets/a" class="btn" target="_blank">Download Enrollment Form</a>
-  <a href="https://forms.gle/BNbgfprU1LSrzRN3A" class="btn" target="_blank">Join the Brightsteps Waitlist</a>
-  <a href="/assets/b.pdf" class="btn" target="_blank">Parent Handbook</a>
-</div>
+    <div class="staff-gallery">
+      <div class="staff-member">
+        <img src="image/female.jpg" alt="Ms. Amina" />
+        <p><strong>Ms. Amina</strong><br>Lead Preschool Teacher, 10+ years experience</p>
+      </div>
+      <div class="staff-member">
+        <img src="image/jane.jpg" alt="Jane Kiiru" />
+        <p><strong>Ms Kiiru</strong><br>Director and Educator</p>
+      </div>
+      <div class="staff-member">
+        <img src="image/tom.jpg" alt="Mr. Tom" />
+        <p><strong>Mr. Tom</strong><br>Security Personnel</p>
+      </div>
+      <div class="staff-member">
+        <img src="image/male.jpg" alt="Mr. Brian" />
+        <p><strong>Mr. Brian</strong><br>Infant Care Specialist, CPR Certified</p>
+      </div>
+      <div class="staff-member">
+        <img src="image/john1.jpg" alt="Mr. John" />
+        <p><strong>Mr. John</strong><br>Driver</p>
+      </div>
+    </div>
+  </section>
 
-</div>
+  <!-- Facility Tour Section -->
+  <section id="facility-tour">
+    <h2>Facility Tour</h2>
+    <p>Take a virtual walk through our vibrant classrooms, cozy nap areas, and playful outdoor spaces designed for safety and exploration.</p>
+    <div class="gallery-grid">
+      <img src="image/classroom.jpg" alt="Classroom" />
+      <img src="image/playground.jpg" alt="Playground" />
+      <img src="image/naproom.jpg" alt="Nap Room" />
+    </div>
+  </section>
 
-</div>
-</section>
- 
- 
-  <!-- After-School Pickup -->
+  <!-- Daily Routine -->
+  <section id="daily-routine">
+    <h2>Daily Routine</h2>
+    <p>Our programs run Monday–Friday. For flexible schedules, please reach out through our contact options.</p>
+    <ul class="routine-list">
+      <li><strong>8:00 AM:</strong> Arrival & Free Play</li>
+      <li><strong>9:00 AM:</strong> Circle Time & Learning Activities</li>
+      <li><strong>11:30 AM:</strong> Lunch & Quiet Time</li>
+      <li><strong>1:00 PM:</strong> Nap Time</li>
+      <li><strong>3:00 PM:</strong> Outdoor Play</li>
+      <li><strong>4:30 PM:</strong> Story Time & Pickup</li>
+    </ul>
+  </section>
+
+  <!-- Enrollment Info -->
+  <section id="enrollment-info">
+    <h2>Enrollment Information</h2>
+    <p>We welcome children aged 6 months to 5 years. Enrollment is open year-round based on availability.</p>
+    <div class="cta-buttons">
+      <a href="/assets/enrollment.pdf" class="btn" target="_blank">Download Enrollment Form</a>
+      <a href="https://forms.gle/BNbgfprU1LSrzRN3A" class="btn" target="_blank">Join the Brightsteps Waitlist</a>
+      <a href="assets/handbook.pdf" class="btn" target="_blank">Parent Handbook</a>
+    </div>
+  </section>
+
+  <!-- AFTER-SCHOOL PICKUP SECTION -->
 <section id="pickup">
-<h2>After-School Pickup</h2>
-<p>We offer safe and reliable after-school pickup for children enrolled in nearby schools. Our trained staff ensures a smooth transition from school to daycare, with snacks, homework help, and supervised play until pickup time.</p>
-<ul>
-<li>Available Monday–Friday, 3:00 PM – 6:00 PM</li>
-<li>Pickup from select local schools</li>
-<li>Includes snack, quiet time, and structured activities</li>
-<li>Optional extended care until 7:00 PM</li>
-</ul>
-<a href="#contact" class="btn">Request Pickup Service</a>
-<p>We offer flexible payment plans. Contact us for a personalized quote based on your child’s age and schedule.</p>
+  <div class="pickup-content">
+    <h2>After-School Pickup</h2>
+    <p>We offer safe and reliable after-school pickup for children enrolled in nearby schools. Our trained staff ensures a smooth transition from school to daycare, with snacks, homework help, and supervised play until pickup time.</p>
+    
+    <ul>
+      <li>Available Monday–Friday, 3:00 PM – 6:00 PM</li>
+      <li>Pickup from select local schools</li>
+      <li>Includes snack, quiet time, and structured activities</li>
+      <li>Optional extended care until 7:00 PM</li>
+    </ul>
 
+    <a href="#contact" class="btn">Request Pickup Service</a>
+
+    <p>We offer flexible payment plans. Contact us for a personalized quote based on your child’s age and schedule.</p>
+  </div>
 </section>
- 
+
+
   <!-- Parent Resources -->
-<section id="resources">
-<h2>Parent Resources</h2>
-<ul>
-<li><a href="handbook.pdf" download>Download Parent Handbook</a></li>
-<li><a href="#faq">Frequently Asked Questions</a></li>
-<li><a href="#contact">Contact Information</a></li>
-</ul>
-</section>
- 
-</section>
- 
+  <section id="resources">
+    <h2>Parent Resources</h2>
+    <ul>
+      <li><a href="/assests/handbook.pdf" download>Download Parent Handbook</a></li>
+      <li><a href="#faq">Frequently Asked Questions</a></li>
+      <li><a href="#contact">Contact Information</a></li>
+    </ul>
+  </section>
+
   <!-- Gallery -->
-<section id="gallery">
-<h2>Gallery</h2>
-<p>See our little learners in action!</p>
-<div class="gallery-grid">
-<img src="image/play1.jpg" alt="Kids painting" />
-<img src="image/play2.jpg" alt="Outdoor play" />
-<img src="image/play3.jpg" alt="Story time" />
-<img src="image/play4.jpg" alt="Story time" />
-<img src="image/playmain.jpg" alt="Story time" />
-<img src="image/schoolbus.jpg.jpg" alt="Story time" />
-<img src="image/teacher 2.jpg" alt="Story time" />
-<img src="image/teacher1.jpg" alt="Story time" />
-<img src="image/brian.jpg" alt="Story time" />
-<img src="image/female.jpg" alt="Story time" />
-<img src="image/happy children.jpg" alt="Story time" />
-<img src="image/john1.jpg" alt="Story time" />
-<img src="image/tom.jpg" alt="Story time" />
-<img src="image/jane.jpg" alt="Story time" />
-</div>
-</section>
- 
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <p>See our little learners in action!</p>
+    <div class="gallery-grid">
+      <img src="image/play1.jpg" alt="Kids painting" />
+      <img src="image/play2.jpg" alt="Outdoor play" />
+      <img src="image/play3.jpg" alt="Story time" />
+      <img src="image/play4.jpg" alt="Story time" />
+      <img src="image/playmain.jpg" alt="Story time" />
+      <img src="image/teacher 2.jpg" alt="Story time" />
+      <img src="image/teacher1.jpg" alt="Story time" />
+      <img src="image/brian.jpg" alt="Story time" />
+      <img src="image/happychildren.jpg" alt="Story time" />
+
+    </div>
+  </section>
+
   <!-- Contact Us -->
-<section id="contact">
-<h2>Contact Us</h2>
-<p><strong>Phone:</strong> <a href="tel:+254712345678">+254 712 345678</a></p>
-<p><strong>Email:</strong> <a href="mailto:info@brightsteps.co.ke">info@brightsteps.co.ke</a></p>
-<p><strong>Hours:</strong> Mon–Fri, 7:30 AM – 5:30 PM</p>
- 
-    <form action="https://brightsteps-daycare.onrender.com/book" method="POST">
-<h3>Send Us a Message</h3>
-<input type="text" name="name" placeholder="Your Name" required />
-<input type="email" name="email" placeholder="Your Email" required />
-<textarea name="message" placeholder="Your Message" required></textarea>
-<button type="submit">Submit</button>
-</form>
-</section>
- 
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Phone:</strong> <a href="tel:+254712345678">+254 712 345678</a></p>
+    <p><strong>Email:</strong> <a href="mailto:info@brightsteps.co.ke">info@brightsteps.co.ke</a></p>
+    <p><strong>Hours:</strong> Mon–Fri, 7:30 AM – 5:30 PM</p>
+
+    <form action="/api/book" method="POST">
+      <h3>Send Us a Message</h3>
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
   <!-- Floating Contact Button -->
-<a href="#contact"
+  <a href="#contact" class="floating-contact">Contact Us</a>
+
+  <!-- Scroll Animation Script -->
+  <script>
+    window.addEventListener('scroll', function () {
+      const pickup = document.getElementById('pickup');
+      const rect = pickup.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        pickup.classList.add('visible');
+      }
+    });
+  </script>
+  <script>
+  window.addEventListener('scroll', function() {
+    const routine = document.getElementById('routine');
+    if (!routine) return;
+    const rect = routine.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      routine.classList.add('visible');
+    }
+  });
+</script>
+
+</body>
+</html>

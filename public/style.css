@@ -1,5 +1,9 @@
-/* Global Styles */
+/* =======================
 
+   GLOBAL STYLES
+
+======================= */
+ 
 html {
 
   scroll-behavior: smooth;
@@ -14,31 +18,37 @@ body {
 
   padding: 0;
 
-  line-height: 1.6;
+  line-height: 1.7;
 
-  background-color: #fdfdfd;
+  background: linear-gradient(to bottom, #eaf4f2, #f4f8f7); /* soft gradient */
 
-  color: #333;
+  color: #000; /* switched to black for better contrast */
 
-  font-size: 18px;
+  font-size: 19px;
 
 }
  
+/* Headings */
+
 h1, h2, h3 {
 
   text-align: center;
 
   margin-top: 20px;
 
+  color: #1f2d27;
+
 }
  
+/* Sections */
+
 section {
 
-  padding: 40px 20px;
+  padding: 50px 25px;
 
   text-align: center;
 
-  font-size: 1.1em;
+  font-size: 1.15em;
 
 }
  
@@ -48,6 +58,8 @@ section p {
 
 }
  
+/* Lists and Forms inside sections */
+
 section ul,
 
 section ol,
@@ -58,19 +70,27 @@ section form {
 
   margin: 0 auto;
 
-  max-width: 600px;
+  max-width: 700px;
 
 }
  
-/* Navigation */
+/* =======================
 
-header, .navbar {
+   NAVIGATION BAR
 
-  margin: 0;
+======================= */
+ 
+.navbar {
 
-  padding: 10px 20px;
+  display: flex;
 
-  background-color: #0077b6;
+  justify-content: space-between;
+
+  align-items: center;
+
+  background-color: #5a8f7b;
+
+  padding: 12px 25px;
 
   color: white;
 
@@ -82,19 +102,9 @@ header, .navbar {
 
 }
  
-.navbar {
-
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: center;
-
-}
- 
 .logo {
 
-  font-size: 1.5em;
+  font-size: 1.7em;
 
   font-weight: bold;
 
@@ -106,7 +116,7 @@ header, .navbar {
 
   display: flex;
 
-  gap: 15px;
+  gap: 20px;
 
 }
  
@@ -126,15 +136,19 @@ header, .navbar {
 
 }
  
-/* Hero Section */
+/* =======================
 
+   HERO SECTION
+
+======================= */
+ 
 .hero {
 
   background-image: url('image/newfav.jpg');
 
   background-size: cover;
 
-  background-position: center center;
+  background-position: center;
 
   background-repeat: no-repeat;
 
@@ -142,7 +156,7 @@ header, .navbar {
 
   text-align: center;
 
-  height: 70vh;
+  min-height: 100vh;
 
   display: flex;
 
@@ -150,63 +164,97 @@ header, .navbar {
 
   justify-content: center;
 
+  position: relative;
+
   margin: 0;
 
   padding: 0;
 
+}
+ 
+.hero::after {
+
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  right: 0;
+
+  bottom: 0;
+
+  background: linear-gradient(to bottom right, rgba(0, 40, 0, 0.4), rgba(0, 0, 0, 0.3));
+
+}
+ 
+.hero h1,
+
+.hero p {
+
   position: relative;
+
+  z-index: 1;
 
 }
  
 .tagline {
 
-  font-size: 1.5em;
+  font-size: 1.8em;
 
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 
 }
  
-.cta-buttons {
+/* =======================
 
-  margin-top: 20px;
+   BUTTONS
 
-}
+======================= */
  
 .btn {
 
   display: inline-block;
 
-  background-color: #0077b6;
+  background-color: #5a8f7b;
 
   color: white;
 
-  padding: 10px 20px;
+  padding: 12px 24px;
 
-  margin: 5px;
+  margin: 10px;
 
-  border-radius: 5px;
+  border-radius: 6px;
 
   font-weight: bold;
 
   text-decoration: none;
 
+  transition: background-color 0.3s ease;
+
 }
  
 .btn:hover {
 
-  background-color: #005f8e;
+  background-color: #4a7868;
 
 }
  
-/* Staff Gallery */
+/* =======================
 
+   STAFF GALLERY
+
+======================= */
+ 
 .staff-gallery {
 
   display: flex;
 
   flex-wrap: wrap;
 
-  gap: 20px;
+  gap: 25px;
 
   justify-content: center;
 
@@ -214,7 +262,7 @@ header, .navbar {
  
 .staff-member {
 
-  width: 200px;
+  width: 220px;
 
   text-align: center;
 
@@ -224,7 +272,7 @@ header, .navbar {
 
   width: 100%;
 
-  height: 200px;
+  height: 220px;
 
   object-fit: cover;
 
@@ -232,17 +280,21 @@ header, .navbar {
 
 }
  
-/* Gallery Grid */
+/* =======================
 
+   GALLERY GRID
+
+======================= */
+ 
 .gallery-grid {
 
   display: grid;
 
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 
-  gap: 15px;
+  gap: 20px;
 
-  padding: 20px;
+  padding: 25px;
 
 }
  
@@ -250,89 +302,25 @@ header, .navbar {
 
   width: 100%;
 
-  height: 200px;
+  height: 220px;
 
   object-fit: cover;
 
   border-radius: 8px;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
 }
  
-.gallery-grid img:hover {
+/* =======================
 
-  transform: scale(1.05);
+   CONTACT SECTION
 
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
-}
+======================= */
  
-/* Daily Routine */
-
-.routine-list {
-
-  list-style: none;
-
-  padding: 0;
-
-  max-width: 600px;
-
-  margin: 0 auto;
-
-  text-align: left;
-
-}
- 
-.routine-list li {
-
-  background-color: #f0f8ff;
-
-  padding: 12px 18px;
-
-  margin-bottom: 10px;
-
-  border-left: 5px solid #0077b6;
-
-  border-radius: 5px;
-
-}
- 
-/* Enrollment Info */
-
-.enrollment-buttons {
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  justify-content: center;
-
-  gap: 15px;
-
-  margin-top: 20px;
-
-}
- 
-.enrollment-buttons .btn {
-
-  background-color: #00b4d8;
-
-}
- 
-.enrollment-buttons .btn:hover {
-
-  background-color: #0096c7;
-
-}
- 
-/* Contact Section */
-
 #contact {
 
-  background-color: #f9f9f9;
+  background-color: #e7f0ed;
 
-  padding: 40px 20px;
+  padding: 50px 25px;
 
   text-align: center;
 
@@ -340,7 +328,7 @@ header, .navbar {
  
 #contact form {
 
-  max-width: 600px;
+  max-width: 700px;
 
   margin: 0 auto;
 
@@ -348,15 +336,15 @@ header, .navbar {
 
   flex-direction: column;
 
-  gap: 15px;
+  gap: 18px;
 
-  background-color: white;
+  background-color: rgb(134, 114, 114);
 
-  padding: 30px;
+  padding: 35px;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
 
 }
  
@@ -364,27 +352,27 @@ header, .navbar {
 
 #contact textarea {
 
-  padding: 10px;
+  padding: 12px;
 
   font-size: 1em;
 
   border: 1px solid #ccc;
 
-  border-radius: 5px;
+  border-radius: 6px;
 
 }
  
 #contact button {
 
-  background-color: #0077b6;
+  background-color: #5a8f7b;
 
   color: white;
 
-  padding: 12px;
+  padding: 14px;
 
   border: none;
 
-  border-radius: 5px;
+  border-radius: 6px;
 
   font-size: 1em;
 
@@ -394,27 +382,90 @@ header, .navbar {
  
 #contact button:hover {
 
-  background-color: #005f8e;
+  background-color: #4a7868;
+
+}
+ /* =======================
+   DAILY ROUTINE ANIMATION
+======================= */
+#routine {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.9s ease-out;
+}
+
+#routine.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =======================
+
+   AFTER-SCHOOL PICKUP SECTION
+
+======================= */
+ 
+#pickup {
+
+  background-image: url('/image/schoolbus.jpg');
+
+  background-size: cover;
+
+  background-position: center;
+
+  background-repeat: no-repeat;
+
+  color: rgb(247, 244, 244);
+
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+
+  padding: 80px 25px;
+
+  border-radius: 0;
+
+  margin: 0;
+
+  width: 100%;
+
+  box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+
+  transition: opacity 1s ease, transform 1s ease;
+
+  opacity: 0;
+
+  transform: translateY(40px);
 
 }
  
-/* Footer */
+#pickup.visible {
 
+  opacity: 1;
+
+  transform: translateY(0);
+
+}
+ 
+/* =======================
+
+   FOOTER
+
+======================= */
+ 
 footer {
 
-  background-color: #0077b6;
+  background-color: #b7d3c6;
 
-  color: white;
+  color: #1f2d27;
 
   text-align: center;
 
-  padding: 20px;
+  padding: 25px;
 
 }
  
 footer a {
 
-  color: white;
+  color: #1f2d27;
 
   font-weight: bold;
 
@@ -428,8 +479,12 @@ footer a:hover {
 
 }
  
-/* Floating Contact Button */
+/* =======================
 
+   FLOATING CONTACT BUTTON
+
+======================= */
+ 
 .floating-contact {
 
   position: fixed;
@@ -438,17 +493,17 @@ footer a:hover {
 
   right: 20px;
 
-  background-color: #0077b6;
+  background-color: #5a8f7b;
 
   color: white;
 
-  padding: 12px 18px;
+  padding: 14px 20px;
 
   border-radius: 50px;
 
   font-weight: bold;
 
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
   z-index: 1000;
 
@@ -458,19 +513,23 @@ footer a:hover {
  
 .floating-contact:hover {
 
-  background-color: #005f8e;
+  background-color: #4a7868;
 
 }
  
-/* Responsive */
+/* =======================
 
+   RESPONSIVE DESIGN
+
+======================= */
+ 
 @media (max-width: 768px) {
 
   .nav-links {
 
     flex-direction: column;
 
-    gap: 10px;
+    gap: 12px;
 
   }
  
@@ -482,13 +541,19 @@ footer a:hover {
  
   #contact form {
 
-    width: 90%;
+    width: 95%;
 
   }
  
-  .hero {
+  #pickup {
 
-    height: 60vh;
+    padding: 50px 20px;
+
+  }
+ 
+  .gallery-grid {
+
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 
   }
 
